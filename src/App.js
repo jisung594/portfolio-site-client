@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -10,7 +9,7 @@ class App extends Component {
 
   componentDidMount() {
     this.callBackend()
-      .then(res => this.setState({data: res.express}))
+      .then(res => this.setState({data: res}))
       .catch(err => console.log(err))
   }
 
@@ -26,11 +25,14 @@ class App extends Component {
 
 
   render () {
+    console.log(this.state.data)
+
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.data}</p>
+          <p>{this.state.data ? this.state.data[0]["name"] : "loading"}</p>
+          <p>{this.state.data ? this.state.data[1]["name"] : "loading"}</p>
+          <p>{this.state.data ? this.state.data[2]["name"] : "loading"}</p>
         </header>
       </div>
     );
