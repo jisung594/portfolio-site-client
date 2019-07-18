@@ -2,27 +2,26 @@ import React, { Component } from 'react';
 import Navbar from './Components/Navbar'
 import PortfolioContainer from './Components/PortfolioContainer'
 import './App.css';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 
 
 class App extends Component {
   state = {
-    devProjects: null,
-    designProjects: null
+    devProjects: [],
+    designProjects: []
   }
 
   componentDidMount() {
     this.callBackend()
-      .then(res => this.setState(
-        {
-          devProjects: res[0],
-          designProjects: res[1]
-        }
-      ))
+      .then(res => this.setState({
+        devProjects: res[0],
+        designProjects: res[1]
+      }))
       .catch(err => console.log(err))
   }
 
   callBackend = async () => {
-    const response = await fetch('/api/dev-projects')
+    const response = await fetch('/api/projects')
     const body = await response.json()
 
     if (response.status !== 200) {
@@ -31,24 +30,25 @@ class App extends Component {
     return body
   }
 
-
   render () {
-    // console.log(this.state.devProjects)
+    console.log(this.state.devProjects)
 
     return (
-      <div className="App">
-        <Navbar />
-        <PortfolioContainer projects={this.state.devProjects}/>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          {this.state.devProjects.length ? <PortfolioContainer projects={this.state.devProjects}/> : null}
 
-        {/*
-          <p>{this.state.devProjects ? this.state.devProjects[0]["name"] : "loading"}</p>
-          <p>{this.state.devProjects ? this.state.devProjects[1]["name"] : "loading"}</p>
-          <p>{this.state.devProjects ? this.state.devProjects[2]["name"] : "loading"}</p>
+          {/*
+            <p>{this.state.devProjects ? this.state.devProjects[0]["name"] : "loading"}</p>
+            <p>{this.state.devProjects ? this.state.devProjects[1]["name"] : "loading"}</p>
+            <p>{this.state.devProjects ? this.state.devProjects[2]["name"] : "loading"}</p>
 
-          <p>{this.state.designProjects ? this.state.designProjects[0]["name"] : "loading"}</p>
-          <p>{this.state.designProjects ? this.state.designProjects[1]["name"] : "loading"}</p>
-        */}
-      </div>
+            <p>{this.state.designProjects ? this.state.designProjects[0]["name"] : "loading"}</p>
+            <p>{this.state.designProjects ? this.state.designProjects[1]["name"] : "loading"}</p>
+          */}
+        </div>
+      </BrowserRouter>
     );
   }
 }

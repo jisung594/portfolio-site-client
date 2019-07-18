@@ -1,12 +1,32 @@
 import React from 'react';
+import { Route, Link, Switch } from 'react-router-dom'
+import ProjectCard from './ProjectCard'
 
 const PortfolioContainer = (props) => {
   let { projects } = props;
-  
+
+  let projectList
+  if (projects.length > 0) {
+    projectList = projects.map(projectObj => {
+      return <ProjectCard project={projectObj}/>
+    })
+  }
+
   return (
     <div>
-      <h1>(type of) Projects</h1>
-    </div>
+      <Switch>
+        <Route path='/projects' render={
+           () => {
+             return <div>
+                 <h1>(type of) Projects</h1>
+               <div>
+                 {projectList}
+               </div>
+             </div>
+           }
+         }/>
+       </Switch>
+     </div>
   )
 }
 
