@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom'
-import ProjectCard from './ProjectCard'
+import { Route, Switch } from 'react-router-dom';
+import ProjectCard from './ProjectCard';
 
 const PortfolioContainer = (props) => {
   let { projects } = props;
@@ -8,7 +8,7 @@ const PortfolioContainer = (props) => {
   let projectList
   if (projects.length > 0) {
     projectList = projects.map(projectObj => {
-      return <ProjectCard project={projectObj}/>
+      return <ProjectCard project={projectObj} key={projectObj.id}/>
     })
   }
 

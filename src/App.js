@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Navbar from './Components/Navbar'
 import PortfolioContainer from './Components/PortfolioContainer'
+import About from './Components/About'
+import Contact from './Components/Contact'
 import './App.css';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 
 class App extends Component {
@@ -31,22 +33,15 @@ class App extends Component {
   }
 
   render () {
-    console.log(this.state.devProjects)
+    // console.log(this.state.devProjects)
 
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
-          {this.state.devProjects.length ? <PortfolioContainer projects={this.state.devProjects}/> : null}
-
-          {/*
-            <p>{this.state.devProjects ? this.state.devProjects[0]["name"] : "loading"}</p>
-            <p>{this.state.devProjects ? this.state.devProjects[1]["name"] : "loading"}</p>
-            <p>{this.state.devProjects ? this.state.devProjects[2]["name"] : "loading"}</p>
-
-            <p>{this.state.designProjects ? this.state.designProjects[0]["name"] : "loading"}</p>
-            <p>{this.state.designProjects ? this.state.designProjects[1]["name"] : "loading"}</p>
-          */}
+          <Navbar/>
+          <PortfolioContainer projects={this.state.devProjects}/>
+          <About/>
+          <Contact/>
         </div>
       </BrowserRouter>
     );

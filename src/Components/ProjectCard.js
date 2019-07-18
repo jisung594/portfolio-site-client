@@ -6,7 +6,7 @@ const ProjectCard = (props) => {
   return (
     <div>
       <h1>{project["name"]}</h1>
-      <h1>{project["url"]}</h1>
+      <h3>{project["url"]}</h3>
     </div>
   )
 }
