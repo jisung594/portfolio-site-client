@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
+import Navbar from './Components/Navbar'
+import PortfolioContainer from './Components/PortfolioContainer'
 import './App.css';
 
-class App extends Component {
 
+class App extends Component {
   state = {
-    data: null
+    devProjects: null,
+    designProjects: null
   }
 
   componentDidMount() {
     this.callBackend()
-      .then(res => this.setState({data: res}))
+      .then(res => this.setState(
+        {
+          devProjects: res[0],
+          designProjects: res[1]
+        }
+      ))
       .catch(err => console.log(err))
   }
 
   callBackend = async () => {
-    const response = await fetch('/express-backend')
+    const response = await fetch('/api/dev-projects')
     const body = await response.json()
 
     if (response.status !== 200) {
@@ -25,18 +33,24 @@ class App extends Component {
 
 
   render () {
-    console.log(this.state.data)
+    // console.log(this.state.devProjects)
 
     return (
       <div className="App">
-        <header className="App-header">
-          <p>{this.state.data ? this.state.data[0]["name"] : "loading"}</p>
-          <p>{this.state.data ? this.state.data[1]["name"] : "loading"}</p>
-          <p>{this.state.data ? this.state.data[2]["name"] : "loading"}</p>
-        </header>
+        <Navbar />
+        <PortfolioContainer projects={this.state.devProjects}/>
+
+        {/*
+          <p>{this.state.devProjects ? this.state.devProjects[0]["name"] : "loading"}</p>
+          <p>{this.state.devProjects ? this.state.devProjects[1]["name"] : "loading"}</p>
+          <p>{this.state.devProjects ? this.state.devProjects[2]["name"] : "loading"}</p>
+
+          <p>{this.state.designProjects ? this.state.designProjects[0]["name"] : "loading"}</p>
+          <p>{this.state.designProjects ? this.state.designProjects[1]["name"] : "loading"}</p>
+        */}
       </div>
     );
   }
 }
 
-export default App;
+export default App
