@@ -5,8 +5,8 @@ const ProjectCard = (props) => {
 
   return (
     <div>
-      <h1>{project["name"]}</h1>
-      <h3>{project["url"]}</h3>
+      <h3>{project["name"]}</h3>
+      <p>{project["url"]}</p>
     </div>
   )
 }

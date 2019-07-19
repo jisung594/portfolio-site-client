@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Components/Navbar'
-import PortfolioContainer from './Components/PortfolioContainer'
-import About from './Components/About'
-import Contact from './Components/Contact'
+import MainContainer from './Components/MainContainer'
 import './App.css';
 import { BrowserRouter } from 'react-router-dom'
 
@@ -39,9 +37,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar/>
-          <PortfolioContainer projects={this.state.devProjects}/>
-          <About/>
-          <Contact/>
+          <MainContainer projects={this.state}/>
         </div>
       </BrowserRouter>
     );
