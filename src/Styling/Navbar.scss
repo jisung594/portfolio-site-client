@@ -1,0 +1,12 @@
+$midnight-gray: #35444a;
+$lemon-lite: #fff2c4;
+
+.navbar {
+  background-color: $midnight-gray;
+
+  span {
+    text-decoration: none;
+    color: $lemon-lite;
+    margin: 1vw;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../PortfolioCard.scss'
+import '../Styling/Projects.scss'
 
 const ProjectCard = (props) => {
   let { project } = props;
@@ -8,13 +8,13 @@ const ProjectCard = (props) => {
 
   let keyValues
   if (project["type"] === "dev") {
-    keyValues = <div class="card-container">
+    keyValues = <div className="card-container">
       <h2>{project["name"]}</h2>
       <img src={project["img"]} alt="screenshot" crossOrigin=""/>
       <a href={project["url"]}>VIEW</a>
     </div>
   } else {
-    keyValues = <div class="card-container">
+    keyValues = <div className="card-container">
       <h2>{project["name"]}</h2>
       <h5>{project["img"]}</h5>
     </div>

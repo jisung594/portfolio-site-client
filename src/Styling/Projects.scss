@@ -1,0 +1,46 @@
+// ProjectCard styling
+$midnight: #0a384a;
+$lemon-lite: #fff2c4;
+
+@mixin yellow-text {
+  color: $lemon-lite;
+}
+
+.card-container {
+  background-color: $midnight;
+  width: 20vw;
+  height: 50vh;
+  margin: auto;
+
+  h2 {
+    @include yellow-text;
+  }
+
+  a {
+    text-decoration: none;
+    @include yellow-text;
+  }
+}
+
+
+// PortfolioContainer styling
+#portfolio-container {
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+  width: 100vw;
+  background-color: lightgray;
+
+  span {
+    margin: 2vw;
+  }
+
+  #portfolio-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
+
+// experiment with mixins

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './Components/Navbar'
 import MainContainer from './Components/MainContainer'
-import './App.css';
 import { BrowserRouter } from 'react-router-dom'
+import './Styling/App.scss';
 
 
 class App extends Component {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProjectCard from './ProjectCard';
+import '../Styling/Projects.scss'
 // import { Link } from 'react-router-dom';
 
 // const PortfolioContainer = (props) => {
@@ -31,11 +32,15 @@ class PortfolioContainer extends Component {
     }
 
     return (
-      <div>
-        <span id="dev" onClick={this.clickHandler}>DEV</span>
-        <span id="design" onClick={this.clickHandler}>DESIGN</span>
+      <div id="portfolio-container">
+        <div id="portfolio-type">
+          <span id="dev" onClick={this.clickHandler}>DEV</span>
+          <span id="design" onClick={this.clickHandler}>DESIGN</span>
+        </div>
 
-        {this.state.clicked === "design" ? designProjectList : devProjectList}
+        <div id="portfolio-list">
+          {this.state.clicked === "design" ? designProjectList : devProjectList}
+        </div>
 
         {/*<Switch>
           <Route path='/dev-projects' render={
