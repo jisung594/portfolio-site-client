@@ -6,19 +6,26 @@ $lemon-lite: #fff2c4;
   color: $lemon-lite;
 }
 
+@mixin no-line-height {
+  line-height: 5vh;
+  margin: 0;
+}
+
 .card-container {
   background-color: $midnight;
-  width: 20vw;
+  width: 33vw;
   height: 50vh;
   margin: auto;
 
   h2 {
     @include yellow-text;
+    @include no-line-height;
   }
 
   a {
     text-decoration: none;
     @include yellow-text;
+    @include no-line-height;
   }
 }
 
@@ -36,7 +43,8 @@ $lemon-lite: #fff2c4;
 
   #portfolio-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-column-gap: 0.5vw;
   }
 }
 
