@@ -7,10 +7,12 @@ const Navbar = (props) => {
 
   return (
     <div className="navbar">
-      <Link to={'/'}><span>HOME</span></Link>
-      <Link to={'/work'}><span>WORK</span></Link>
-      <Link to={'/about'}><span>ABOUT</span></Link>
-      <Link to={'/contact'}><span>CONTACT</span></Link>
+      <div className="navbar-options">
+        <Link to={'/'}><label>HOME</label></Link>
+        <Link to={'/work'}><label>WORK</label></Link>
+        <Link to={'/about'}><label>ABOUT</label></Link>
+        <Link to={'/contact'}><label>CONTACT</label></Link>
+      </div>
     </div>
   )
 }

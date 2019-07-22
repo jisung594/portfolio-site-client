@@ -1,9 +1,11 @@
 // ProjectCard styling
-$midnight: #0a384a;
+$darkgray: #474747;
+$midnight: #363636;
 $lemon-lite: #fff2c4;
+$white: white;
 
 @mixin yellow-text {
-  color: $lemon-lite;
+  color: $white;
 }
 
 @mixin no-line-height {
@@ -12,7 +14,7 @@ $lemon-lite: #fff2c4;
 }
 
 .card-container {
-  background-color: $midnight;
+  background-color: lightgray;
   width: 33vw;
   height: 50vh;
   margin: auto;
@@ -35,10 +37,12 @@ $lemon-lite: #fff2c4;
   display: grid;
   grid-template-rows: 10vh 90vh;
   width: 100vw;
-  background-color: lightgray;
+  background-color: $midnight;
 
   span {
+    color: $darkgray;
     margin: 2vw;
+    font-size: 3vw;
   }
 
   #portfolio-list {

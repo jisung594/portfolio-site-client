@@ -7,7 +7,7 @@ import '../Styling/Projects.scss'
 //   let { projects } = props;
 class PortfolioContainer extends Component {
   state = {
-    clicked: ""
+    clicked: "dev"
   }
 
   clickHandler = (event) => {
@@ -34,8 +34,9 @@ class PortfolioContainer extends Component {
     return (
       <div id="portfolio-container">
         <div id="portfolio-type">
-          <span id="dev" onClick={this.clickHandler} style={this.state.clicked === "dev" ? {color:"red"} : {color:"black"}}>DEV</span>
-          <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"red"} : {color:"black"}}>DESIGN</span>
+          <span id="dev" onClick={this.clickHandler} style={this.state.clicked === "dev" ? {color:"#E8175D"} : {color:"#474747"}}>DEV</span>
+          <span>|</span>
+          <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#474747"}}>DESIGN</span>
         </div>
 
         <div id="portfolio-list">
