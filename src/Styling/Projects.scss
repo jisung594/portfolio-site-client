@@ -29,6 +29,10 @@ $white: white;
     @include yellow-text;
     @include no-line-height;
   }
+
+  img {
+    width: 33vw;
+  }
 }
 
 
