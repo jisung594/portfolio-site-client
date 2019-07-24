@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectList from './ProjectList';
 import '../Styling/Projects.scss'
 // import { Link } from 'react-router-dom';
 
@@ -20,14 +20,14 @@ class PortfolioContainer extends Component {
     let devProjectList
     if (this.props.projects["devProjects"].length > 0) {
       devProjectList = this.props.projects["devProjects"].map(projectObj => {
-        return <ProjectCard project={projectObj} key={projectObj.id}/>
+        return <ProjectList project={projectObj} key={projectObj.id}/>
       })
     }
 
     let designProjectList
     if (this.props.projects["designProjects"].length > 0) {
       designProjectList = this.props.projects["designProjects"].map(projectObj => {
-        return <ProjectCard project={projectObj} key={projectObj.id}/>
+        return <ProjectList project={projectObj} key={projectObj.id}/>
       })
     }
 

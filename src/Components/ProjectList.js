@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styling/Projects.scss'
 
-const ProjectCard = (props) => {
+const ProjectList = (props) => {
   let { project } = props;
 
   // let projectKeys = Object.keys(project)
@@ -17,8 +17,10 @@ const ProjectCard = (props) => {
     </div>
   } else {
     keyValues = <div className="card-container">
-      <h2>{project["name"]}</h2>
-      <h5>{project["img"]}</h5>
+      <img src={project["img"]} alt="screenshot" crossOrigin=""/>
+      <div className="project-info">
+        <h2>{project["name"]}</h2>
+      </div>
     </div>
   }
 
@@ -36,4 +38,4 @@ const ProjectCard = (props) => {
   )
 }
 
-export default ProjectCard
+export default ProjectList
