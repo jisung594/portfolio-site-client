@@ -2,10 +2,9 @@
 $darkgray: #474747;
 $midnight: #363636;
 $lemon-lite: #fff2c4;
-$white: white;
 
-@mixin yellow-text {
-  color: $white;
+@mixin info-text-color {
+  color: black;
 }
 
 @mixin no-line-height {
@@ -15,32 +14,57 @@ $white: white;
 
 .card-container {
   background-color: lightgray;
-  width: 33vw;
-  height: 50vh;
+  width: 98vw;
   margin: auto;
-
-  h2 {
-    @include yellow-text;
-    @include no-line-height;
-  }
-
-  a {
-    text-decoration: none;
-    @include yellow-text;
-    @include no-line-height;
-  }
+  display: block;
 
   img {
-    width: 33vw;
+    max-width: 100%;
+    height: auto;
+
+    position: absolute;
   }
+
+  img:hover {
+    display: block;
+    opacity: 0.05;
+    position: absolute;
+    z-index: 2;
+  }
+
+  img:hover + .project-info {
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+
+  .project-info {
+    display: none;
+    position: relative;
+    z-index: 0;
+    top: -500px;
+
+    h2 {
+      @include info-text-color;
+      @include no-line-height;
+    }
+
+    a {
+      text-decoration: none;
+      @include info-text-color;
+      @include no-line-height;
+    }
+  }
+
 }
 
 
 // PortfolioContainer styling
 #portfolio-container {
   display: grid;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 15vh 100vh;
   width: 100vw;
+  height: 500vh;
   background-color: $midnight;
 
   span {
@@ -50,9 +74,10 @@ $white: white;
   }
 
   #portfolio-list {
-    display: grid;
-    grid-template-columns: 33vw 33vw 33vw;
-    grid-column-gap: 0.5vw;
+    margin-bottom: 2vw;
+    // display: grid;
+    // grid-template-rows: 50vh 50vh 50vh;
+    // grid-row-gap: 5vh;
   }
 }
 

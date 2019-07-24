@@ -9,9 +9,11 @@ const ProjectCard = (props) => {
   let keyValues
   if (project["type"] === "dev") {
     keyValues = <div className="card-container">
-      <h2>{project["name"]}</h2>
       <img src={project["img"]} alt="screenshot" crossOrigin=""/>
-      <a href={project["url"]}>VIEW</a>
+      <div className="project-info">
+        <h2>{project["name"]}</h2>
+        <a href={project["url"]}>VIEW</a>
+      </div>
     </div>
   } else {
     keyValues = <div className="card-container">
@@ -27,7 +29,7 @@ const ProjectCard = (props) => {
   // }
 
   return (
-    <div>
+    <div id="portfolio-list">
       {keyValues}
       {/*downloadImage(project["img"])*/}
     </div>

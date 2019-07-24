@@ -39,7 +39,7 @@ class PortfolioContainer extends Component {
           <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#474747"}}>DESIGN</span>
         </div>
 
-        <div id="portfolio-list">
+        <div>
           {this.state.clicked === "design" ? designProjectList : devProjectList}
         </div>
 

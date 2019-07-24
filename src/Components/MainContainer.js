@@ -4,11 +4,12 @@ import PortfolioContainer from './PortfolioContainer'
 import About from './About'
 import Contact from './Contact'
 import { Switch, Route } from 'react-router-dom'
+import '../Styling/App.scss'
 
 class MainContainer extends Component {
   render () {
     return (
-      <div>
+      <div className='main-container'>
         <Switch>
           <Route path='/' component={Homepage} exact/>
           <Route path='/work' render={()=> {
