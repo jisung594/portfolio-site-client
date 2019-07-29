@@ -21,7 +21,8 @@ class App extends Component {
   }
 
   callBackend = async () => {
-    const response = await fetch('/api/projects')
+    // const response = await fetch('/api/projects')
+    const response = await fetch('http://jonathanchoi-api.herokuapp.com/api/projects')
     const body = await response.json()
 
     if (response.status !== 200) {
