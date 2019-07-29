@@ -61,6 +61,19 @@ $lemon-lite: #fff2c4;
 .design-container {
   display: grid;
   grid-template-columns: 30% 30% 30%;
+
+  background-color: lightgray;
+  width: 98vw;
+  margin: auto;
+  display: block;
+
+  img {
+    max-width: 30%;
+    height: auto;
+
+    // position: relative;
+    // z-index: 2;
+  }
 }
 
 
