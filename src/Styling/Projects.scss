@@ -11,7 +11,7 @@ $lemon-lite: #fff2c4;
   margin: 0;
 }
 
-.dev-container {
+.dev-card {
   background-color: lightgray;
   width: 98vw;
   margin: auto;
@@ -58,10 +58,7 @@ $lemon-lite: #fff2c4;
 
 }
 
-.design-container {
-  display: grid;
-  grid-template-columns: 30vw 30vw 30vw;
-
+.design-card {
   background-color: lightgray;
   width: 98vw;
   margin: auto;
