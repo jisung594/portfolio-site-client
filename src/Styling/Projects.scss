@@ -65,9 +65,10 @@ $lemon-lite: #fff2c4;
   background-color: lightgray;
   width: 98vw;
   margin: auto;
-  display: block;
+  // display: block;
 
   img {
+    display: grid;
     max-width: 30%;
     height: auto;
 
