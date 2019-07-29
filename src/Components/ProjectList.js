@@ -8,7 +8,7 @@ const ProjectList = (props) => {
 
   let keyValues
   if (project["type"] === "dev") {
-    keyValues = <div className="card-container">
+    keyValues = <div className="dev-container">
       <img src={project["img"]} alt="screenshot" crossOrigin=""/>
       <div className="project-info">
         <h2>{project["name"]}</h2>
@@ -16,7 +16,7 @@ const ProjectList = (props) => {
       </div>
     </div>
   } else {
-    keyValues = <div className="card-container">
+    keyValues = <div className="design-container">
       <img src={project["img"]} alt="screenshot" crossOrigin=""/>
       <div className="project-info">
         <h2>{project["name"]}</h2>
