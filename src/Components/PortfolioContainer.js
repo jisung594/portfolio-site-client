@@ -38,7 +38,7 @@ class PortfolioContainer extends Component {
         </div>
 
         <div className="portfolio-container" style={
-          this.state.clicked === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw"}}>
+          this.state.clicked === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw", "margin": "5vw"}}>
           {this.state.clicked === "design" ? designProjectList : devProjectList}
         </div>
 
