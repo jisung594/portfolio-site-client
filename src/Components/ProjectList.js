@@ -31,8 +31,7 @@ const ProjectList = (props) => {
   // }
 
   return (
-    <div id="portfolio-list" style={
-      project["type"] === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw"}}>
+    <div id="portfolio-list">
       {keyValues}
       {/*downloadImage(project["img"])*/}
     </div>

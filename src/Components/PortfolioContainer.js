@@ -32,14 +32,15 @@ class PortfolioContainer extends Component {
     }
 
     return (
-      <div id="portfolio-container">
+      <div id="portfolio-page">
         <div id="portfolio-type">
           <span id="dev" onClick={this.clickHandler} style={this.state.clicked === "dev" ? {color:"#E8175D"} : {color:"#474747"}}>DEV</span>
           <span>|</span>
           <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#474747"}}>DESIGN</span>
         </div>
 
-        <div>
+        <div className="portfolio-container" style={
+          this.state.clicked === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw"}}>
           {this.state.clicked === "design" ? designProjectList : devProjectList}
         </div>
 
