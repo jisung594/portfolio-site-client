@@ -3,8 +3,6 @@ import ProjectList from './ProjectList';
 import '../Styling/Projects.scss'
 // import { Link } from 'react-router-dom';
 
-// const PortfolioContainer = (props) => {
-//   let { projects } = props;
 class PortfolioContainer extends Component {
   state = {
     clicked: "dev"
