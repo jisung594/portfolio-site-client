@@ -1,17 +1,47 @@
 $magenta: #E8175D;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto Slab', serif;
+
+@mixin link-color {
+  color: turquoise;
+}
+
+@mixin no-line-height {
+  line-height: 5vh;
+  margin: 0;
+}
+
+@mixin remove-underline {
+  text-decoration: none;
+}
+
 
 .contact {
   width: 60vw;
   margin-left: 5vw;
 
   h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $raleway;
     font-weight: 800;
     color: $magenta;
   }
 
   h4 {
-    font-family: 'Roboto Slab', serif;
+    font-family: $roboto;
     font-weight: 400;
   }
+
+  img {
+    height: 10vh;
+    margin-right: 1vw;
+  }
+
+  // a {
+  //   display: block;
+  //   font-family: $raleway;
+  //   font-weight: 400;
+  //   @include link-color;
+  //   @include no-line-height;
+  //   @include remove-underline;
+  // }
 }

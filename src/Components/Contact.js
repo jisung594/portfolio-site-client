@@ -12,9 +12,16 @@ const Contact = () => {
             <h4>P: (978) 604-4087</h4>
             <h4>E: jonjichoi@gmail.com</h4>
 
-            <a href="https://www.linkedin.com/in/jonathanchoi594/">LinkedIn</a>
-            <a href="https://github.com/jisung594">Github</a>
-            <a href="https://medium.com/@jisung594">Blog</a>
+
+            <a href="https://www.linkedin.com/in/jonathanchoi594/">
+              <img src="https://i.imgur.com/X6Gvwc1.png" alt="linkedin"/>
+            </a>
+            <a href="https://github.com/jisung594">
+              <img src="https://i.imgur.com/xKkPyGv.png" alt="github"/>
+            </a>
+            <a href="https://medium.com/@jisung594">
+              <img src="https://i.imgur.com/PeuZq4q.png" alt="blog"/>
+            </a>
           </div>
         }
       }/>
