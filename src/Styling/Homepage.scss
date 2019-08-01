@@ -1,0 +1,20 @@
+$magenta: #E8175D;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto Slab', serif;
+
+@mixin no-line-height {
+  line-height: 5vh;
+  margin: 0;
+}
+
+#hi {
+  font-family: $raleway;
+  font-size: 14vw;
+  color: $magenta;
+  @include no-line-height;
+  margin: 20vh auto auto 5vw;
+}
+
+.thanks {
+  margin: 20vh auto auto 5vw;
+}

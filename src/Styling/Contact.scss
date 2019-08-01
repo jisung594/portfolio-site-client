@@ -20,6 +20,12 @@ $roboto: 'Roboto Slab', serif;
   width: 60vw;
   margin-left: 5vw;
 
+  span {
+    font-family: $raleway;
+    font-weight: 400;
+    color: $magenta;
+  }
+
   h1 {
     font-family: $raleway;
     font-weight: 800;
@@ -29,6 +35,8 @@ $roboto: 'Roboto Slab', serif;
   h4 {
     font-family: $roboto;
     font-weight: 400;
+    @include no-line-height;
+    display: inline;
   }
 
   img {

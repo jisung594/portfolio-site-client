@@ -9,8 +9,8 @@ const Contact = () => {
         () => {
           return <div className="contact">
             <h1>CONTACT</h1>
-            <h4>P: (978) 604-4087</h4>
-            <h4>E: jonjichoi@gmail.com</h4>
+            <h4><span>P:</span> (978) 604-4087</h4><br/>
+            <h4><span>E:</span> jonjichoi@gmail.com</h4><br/>
 
 
             <a href="https://www.linkedin.com/in/jonathanchoi594/">
