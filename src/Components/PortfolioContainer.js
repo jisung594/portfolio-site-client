@@ -30,8 +30,8 @@ class PortfolioContainer extends Component {
     }
 
     return (
-      <div id="portfolio-page">
-        <div id="portfolio-type">
+      <div className="portfolio-page">
+        <div className="portfolio-type">
           <span id="dev" onClick={this.clickHandler} style={this.state.clicked === "dev" ? {color:"#E8175D"} : {color:"#474747"}}>DEV</span>
           <span>|</span>
           <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#474747"}}>DESIGN</span>
@@ -41,31 +41,7 @@ class PortfolioContainer extends Component {
           this.state.clicked === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw"}}>
           {this.state.clicked === "design" ? designProjectList : devProjectList}
         </div>
-
-        {/*<Switch>
-          <Route path='/dev-projects' render={
-             () => {
-               return <div>
-                   <h1>Dev Projects</h1>
-                 <div>
-                   {devProjectList}
-                 </div>
-               </div>
-             }
-           }/>
-
-           <Route path='/design-projects' render={
-             () => {
-               return <div>
-                  <h1>Design Projects</h1>
-                <div>
-                  {designProjectList}
-                </div>
-               </div>
-             }
-           }/>
-         </Switch>*/}
-       </div>
+      </div>
     )
   }
 }

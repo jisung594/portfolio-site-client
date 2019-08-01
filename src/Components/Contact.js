@@ -12,7 +12,7 @@ const Contact = () => {
             <h4>P: (978) 604-4087</h4>
             <h4>E: jonjichoi@gmail.com</h4>
 
-            <a href="https://www.linkedin.com/in/jonathanchoi594/">Linkedin</a>
+            <a href="https://www.linkedin.com/in/jonathanchoi594/">LinkedIn</a>
             <a href="https://github.com/jisung594">Github</a>
             <a href="https://medium.com/@jisung594">Blog</a>
           </div>
