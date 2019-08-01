@@ -1,6 +1,8 @@
 // ProjectCard styling
 $darkgray: #474747;
-$lemon-lite: #fff2c4;
+$magenta: #E8175D;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto Slab', serif;
 
 @mixin info-text-color {
   color: black;
@@ -44,25 +46,29 @@ $lemon-lite: #fff2c4;
       .project-info {
         position: absolute;
         z-index: 3;
-        width: 20vw;
-        height: 10vh;
+        width: 50vw;
+        height: 20vh;
         margin: auto;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         text-align: center;
-        background-color: red;
+        background-color: $magenta;
 
           h2 {
             @include info-text-color;
             @include no-line-height;
+            margin: 5vh 2vw 2vh 2vw;
+            font-family: $raleway;
+            font-size: 4vw;
           }
 
           a {
-            text-decoration: none;
             @include info-text-color;
             @include no-line-height;
+            font-family: $roboto;
+            font-size: 1.5vw;
           }
       }
 
