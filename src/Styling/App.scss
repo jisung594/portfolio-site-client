@@ -1,16 +1,19 @@
+$midnight: #363636;
+
 .App {
   display: grid;
   grid-template-rows: 5vh 95vh;
   width: 100%;
+
+
+  .main-container {
+    background-color: $midnight;
+    color: white;
+    height: 315vh;
+  }
 }
 
-$midnight: #363636;
 
-.main-container {
-  background-color: $midnight;
-  color: white;
-  height: auto;
-}
 
 
 /* .App-logo {
