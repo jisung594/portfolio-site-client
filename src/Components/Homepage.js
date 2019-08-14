@@ -32,7 +32,6 @@ class Homepage extends Component {
         <br/>
 
         <h4>Welcome to my (work in progress) portfolio.</h4>
-
         <h4>Thanks for coming.</h4>
       </div>
     )
