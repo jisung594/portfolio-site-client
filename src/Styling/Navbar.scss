@@ -1,9 +1,8 @@
-$darkgray: #474747;
-$midnight-gray: #35444a;
-$magenta: #E8175D;
+$lightnavy: #3c4b52;
+$darkturq: #0c2d3b;
 
 .navbar {
-  background-color: $darkgray;
+  background-color: $lightnavy;
   width: 100vw;
 
   .navbar-options {
@@ -17,7 +16,7 @@ $magenta: #E8175D;
       font-size: 1.25vw;
 
       text-decoration: none;
-      color: $magenta;
+      color: $darkturq;
       margin-left: 2vw;
     }
   }

@@ -1,4 +1,5 @@
-$midnight: #363636;
+$charcoal: #363636;
+$darkturq: #0c2d3b;
 
 .App {
   display: grid;
@@ -7,7 +8,7 @@ $midnight: #363636;
 
 
   .main-container {
-    background-color: $midnight;
+    background-image: linear-gradient(45deg, $charcoal, $darkturq);
     color: white;
     height: 315vh;
   }

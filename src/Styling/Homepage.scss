@@ -1,5 +1,6 @@
 $magenta: #E8175D;
-$darkgray: #474747;
+$lightnavy: #3c4b52;
+// $darkgray: #474747;
 $raleway: 'Raleway', sans-serif;
 $roboto: 'Roboto Slab', serif;
 
@@ -10,7 +11,7 @@ $roboto: 'Roboto Slab', serif;
 
 .intro {
   font-family: $raleway;
-  color: $darkgray;
+  color: $lightnavy;
   margin: 20vh auto auto 5vw;
 
   h1 {
