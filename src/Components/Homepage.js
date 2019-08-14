@@ -25,7 +25,7 @@ class Homepage extends Component {
       <div className="intro">
         <h1>Hi.</h1>
 
-        <h1>I'm Jonathan,</h1>
+        <h1>I'm <span>Jonathan</span>,</h1>
         <h1>a frontend</h1>
         <h1>engineer.</h1>
 

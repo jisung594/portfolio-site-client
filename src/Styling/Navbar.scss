@@ -1,7 +1,6 @@
 $darkgray: #474747;
 $midnight-gray: #35444a;
-$lemon-lite: #fff2c4;
-$white: white;
+$magenta: #E8175D;
 
 .navbar {
   background-color: $darkgray;
@@ -11,15 +10,15 @@ $white: white;
     float: right;
     margin-right: 2vw;
     margin-top: 1vh;
-  }
 
-  label {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 1.25vw;
+    label {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      font-size: 1.25vw;
 
-    text-decoration: none;
-    color: $white;
-    margin-left: 2vw;
+      text-decoration: none;
+      color: $magenta;
+      margin-left: 2vw;
+    }
   }
 }
