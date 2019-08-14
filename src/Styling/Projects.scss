@@ -28,6 +28,10 @@ $roboto: 'Roboto Slab', serif;
   }
 
   .portfolio-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+
     .dev-card {
       width: 96vw;
       position: relative;

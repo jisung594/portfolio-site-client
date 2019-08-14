@@ -28,11 +28,6 @@ const ProjectList = (props) => {
     </div>
   }
 
-  // let downloadImage = (url) => {
-  //   let image = new Image()
-  //   image.crossOrigin = "Anonymous"
-  //   image.src = url
-  // }
 
   return (
     <div className="portfolio-list">

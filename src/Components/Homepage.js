@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../Styling/Homepage.scss'
 // import { Route } from 'react-router-dom'
 
-const Homepage = () => {
-  return (
-    <div>
-      <h1 id="hi">Hi!</h1>
+// const Homepage = () => {
+class Homepage extends Component {
+  // componentDidMount() {
+  //   setTimeout(this.typingEffect, 10000)
+  // }
+  //
+  // typingEffect = () => {
+  //   let i = 0
+  //   let text = "Hi"
+  //   let speed = 500
+  //
+  //   if (i < text.length) {
+  //     document.querySelector('#hi').innerText += text.charAt(i)
+  //     i++
+  //     setTimeout(typingEffect, speed)
+  //   }
+  // }
 
-      <div className="thanks">
-        <h2>I'm Jonathan.</h2>
+  render () {
+    return (
+      <div className="intro">
+        <h1>Hi.</h1>
+
+        <h1>I'm Jonathan,</h1>
+        <h1>a frontend</h1>
+        <h1>engineer.</h1>
+
+        <br/>
+
         <h4>Welcome to my (work in progress) portfolio.</h4>
-        <h2>Thanks for coming.</h2>
+
+        <h4>Thanks for coming.</h4>
       </div>
-    </div>
-  )
+    )
+  }
 }
+
 
 export default Homepage

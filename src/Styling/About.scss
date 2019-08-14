@@ -1,8 +1,19 @@
 $magenta: #E8175D;
 
 .about {
-  width: 60vw;
+  width: 100vw;
   margin-left: 5vw;
+  display: grid;
+  grid-template-rows: 5vw 1fr;
+
+  .bio {
+    width: 60vw;
+
+    p {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+    }
+  }
 
   h1 {
     font-family: 'Raleway', sans-serif;
@@ -10,8 +21,9 @@ $magenta: #E8175D;
     color: $magenta;
   }
 
-  p {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
