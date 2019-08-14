@@ -8,10 +8,10 @@ const Navbar = (props) => {
   return (
     <div className="navbar">
       <div className="navbar-options">
-        <Link to={'/'}><label>HOME</label></Link>
-        <Link to={'/work'}><label>WORK</label></Link>
-        <Link to={'/about'}><label>ABOUT</label></Link>
-        <Link to={'/contact'}><label>CONTACT</label></Link>
+        <Link className="link" to={'/'}><label>HOME</label></Link>
+        <Link className="link" to={'/work'}><label>WORK</label></Link>
+        <Link className="link" to={'/about'}><label>ABOUT</label></Link>
+        <Link className="link" to={'/contact'}><label>CONTACT</label></Link>
       </div>
     </div>
   )

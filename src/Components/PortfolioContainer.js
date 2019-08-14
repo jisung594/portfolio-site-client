@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
-import ProjectList from './ProjectList';
+import ProjectCard from './ProjectCard';
 import '../Styling/Projects.scss'
 // import { Link } from 'react-router-dom';
 
 class PortfolioContainer extends Component {
+  componentDidMount() {
+    this.setState({
+      mounted: true
+    })
+
+    let loading = document.querySelector(".loading")
+    loading.innerText = ""
+    loading.style.display = "none"
+  }
+
   state = {
+    mounted: false,
     clicked: "dev"
   }
 
@@ -15,17 +26,17 @@ class PortfolioContainer extends Component {
   }
 
   render () {
-    let devProjectList
+    let devProjectCard
     if (this.props.projects["devProjects"].length > 0) {
-      devProjectList = this.props.projects["devProjects"].map(projectObj => {
-        return <ProjectList project={projectObj} key={projectObj.id}/>
+      devProjectCard = this.props.projects["devProjects"].map(projectObj => {
+        return <ProjectCard project={projectObj} key={projectObj.id}/>
       })
     }
 
-    let designProjectList
+    let designProjectCard
     if (this.props.projects["designProjects"].length > 0) {
-      designProjectList = this.props.projects["designProjects"].map(projectObj => {
-        return <ProjectList project={projectObj} key={projectObj.id}/>
+      designProjectCard = this.props.projects["designProjects"].map(projectObj => {
+        return <ProjectCard project={projectObj} key={projectObj.id}/>
       })
     }
 
@@ -37,9 +48,11 @@ class PortfolioContainer extends Component {
           <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#3c4b52"}}>DESIGN</span>
         </div>
 
+        <h1 className="loading">HEROKU IS SO SLO W W   W</h1>
+
         <div className="portfolio-container" style={
           this.state.clicked === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw"}}>
-          {this.state.clicked === "design" ? designProjectList : devProjectList}
+          {this.state.clicked === "design" ? designProjectCard : devProjectCard}
         </div>
       </div>
     )
