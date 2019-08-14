@@ -1,26 +1,58 @@
 $magenta: #E8175D;
+$lightnavy: #3c4b52;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto Slab', serif;
 
 .about {
   width: 100vw;
-  margin-left: 5vw;
   display: grid;
   grid-template-rows: 5vw 1fr;
-
-  .bio {
-    width: 60vw;
-
-    p {
-      font-family: 'Roboto Slab', serif;
-      font-weight: 400;
-    }
-  }
 
   h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     color: $magenta;
+    margin-left: 5vw;
   }
 
+  .bio {
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    color: $lightnavy;
+
+    .profile-image {
+      img {
+        width: 35vw;
+        margin: 2vw 5vw 2vw 5vw;
+      }
+    }
+
+    .summary {
+      // border-color: white;
+      // border-style: solid;
+
+      h3 {
+        font-family: $raleway;
+        font-weight: 400;
+        font-size: 2em;
+        line-height: 1em;
+        margin: 2vw 5vw 2vw 5vw;
+      }
+
+      p {
+        font-family: $raleway;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 2vw 5vw 2vw 5vw;
+      }
+    }
+  }
+
+  #resume {
+    width: 90vw;
+    margin: 2vw 5vw 2vw 5vw;
+  }
 
   .skills {
     display: grid;
