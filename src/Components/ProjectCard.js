@@ -18,7 +18,7 @@ class ProjectCard extends Component {
           {
             this.state.loaded
             ? null
-            : <h1>LOADING</h1>
+            : <h1>LOADING...</h1>
           }
           <img
             src={this.props.project["img"]}
@@ -39,7 +39,7 @@ class ProjectCard extends Component {
           {
             this.state.loaded
             ? null
-            : <h1>LOADING</h1>
+            : <h1>LOADING...</h1>
           }
           <img
             src={this.props.project["img"]}
