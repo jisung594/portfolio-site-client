@@ -33,6 +33,16 @@ class Homepage extends Component {
 
         <h4>Welcome to my (work in progress) portfolio.</h4>
         <h4>Thanks for coming.</h4>
+
+
+        {/*
+          <div className="footer1">
+            <h2>FOOTER 1</h2>
+          </div>
+          <div className="footer2">
+            <h2>FOOTER 2</h2>
+          </div>
+        */}
       </div>
     )
   }

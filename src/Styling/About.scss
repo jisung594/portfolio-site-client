@@ -4,9 +4,9 @@ $raleway: 'Raleway', sans-serif;
 $roboto: 'Roboto Slab', serif;
 
 .about {
-  width: 100vw;
   display: grid;
   grid-template-rows: 5vw 1fr;
+  width: 100vw;
 
   h1 {
     font-family: 'Raleway', sans-serif;
