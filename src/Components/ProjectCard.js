@@ -50,7 +50,7 @@ class ProjectCard extends Component {
             />
         </div>
         <div className="project-info">
-          <h2>{this.props.project["name"]}</h2>
+          {/*  <h2>{this.props.project["name"]}</h2>  */}
         </div>
       </div>
     }

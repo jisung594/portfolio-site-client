@@ -53,7 +53,15 @@ class PortfolioContainer extends Component {
 
         <div className="portfolio-container" style={this.state.clicked === "dev"
           ? null
-          : {display: "grid", gridTemplateColumns: "30vw 30vw 30vw", gridTemplateRows: "30vw 30vw 30vw"}
+          : {
+              display: "grid",
+              gridTemplateColumns: "32vw 32vw 32vw",
+              gridTemplateRows: "32vw 32vw 32vw",
+              gridColumnGap: "1vw",
+              gridRowGap: "1vw",
+              margin: "2vw auto",
+
+            }
         }>
           {this.state.clicked === "design" ? designProjectCards : devProjectCards}
         </div>

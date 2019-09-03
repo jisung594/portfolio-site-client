@@ -89,12 +89,26 @@ $roboto: 'Roboto Slab', serif;
 
     .design-card {
       background-color: lightgray;
-      width: 30vw;
+      width: 32vw;
+      height: 32vw;
       margin: auto;
+      overflow: hidden;
+      position:relative;
 
       img {
-        width: 30vw;
-        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 50vw;
+
+
+        // transform: scale(1.5);
+        // transform-origin: 50% 50%;
+        // display: block;
+
       }
     }
   }
