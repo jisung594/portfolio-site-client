@@ -26,19 +26,20 @@ class PortfolioContainer extends Component {
   }
 
   render () {
-    let devProjectCard
+    let devProjectCards
     if (this.props.projects["devProjects"].length > 0) {
-      devProjectCard = this.props.projects["devProjects"].map(projectObj => {
+      devProjectCards = this.props.projects["devProjects"].map(projectObj => {
         return <ProjectCard project={projectObj} key={projectObj.id}/>
       })
     }
 
-    let designProjectCard
+    let designProjectCards
     if (this.props.projects["designProjects"].length > 0) {
-      designProjectCard = this.props.projects["designProjects"].map(projectObj => {
+      designProjectCards =  this.props.projects["designProjects"].map(projectObj => {
         return <ProjectCard project={projectObj} key={projectObj.id}/>
       })
     }
+
 
     return (
       <div className="portfolio-page">
@@ -50,9 +51,11 @@ class PortfolioContainer extends Component {
 
         <h1 className="loading">HEROKU IS SO SLO W W   W</h1>
 
-        <div className="portfolio-container" style={
-          this.state.clicked === "dev" ? null : {"grid-template-columns": "30vw 30vw 30vw"}}>
-          {this.state.clicked === "design" ? designProjectCard : devProjectCard}
+        <div className="portfolio-container" style={this.state.clicked === "dev"
+          ? null
+          : {display: "grid", gridTemplateColumns: "30vw 30vw 30vw", gridTemplateRows: "30vw 30vw 30vw"}
+        }>
+          {this.state.clicked === "design" ? designProjectCards : devProjectCards}
         </div>
       </div>
     )
