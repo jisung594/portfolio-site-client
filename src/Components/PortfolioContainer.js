@@ -22,17 +22,31 @@ class PortfolioContainer extends Component {
   }
 
   imgClickHandler = (projectObj) => {
-    if (!this.state.imgWasClicked) {
-      this.setState({
-        imgWasClicked: true,
-        clickedProject: projectObj
-      })
-    } else {
-      this.setState({
-        imgWasClicked: false,
-        clickedProject: {}
-      })
-    }
+
+    this.setState({
+      imgWasClicked: true,
+      clickedProject: projectObj
+    })
+
+
+    // if (!this.state.imgWasClicked) {
+    //   this.setState({
+    //     imgWasClicked: true,
+    //     clickedProject: projectObj
+    //   })
+    // } else {
+    //   this.setState({
+    //     imgWasClicked: false,
+    //     clickedProject: {}
+    //   })
+    // }
+  }
+
+  closeModule = () => {
+    this.setState({
+      imgWasClicked: false,
+      clickedProject: {}
+    })
   }
 
   clickHandler = (event) => {
@@ -52,7 +66,11 @@ class PortfolioContainer extends Component {
     let designProjectCards
     if (this.props.projects["designProjects"].length > 0) {
       designProjectCards =  this.props.projects["designProjects"].map(projectObj => {
-        return <ProjectCard project={projectObj} key={projectObj.id} imgClickHandler={this.imgClickHandler}/>
+        return <ProjectCard
+          project={projectObj}
+          key={projectObj.id}
+          imgClickHandler={this.imgClickHandler}
+        />
       })
     }
 
@@ -75,20 +93,27 @@ class PortfolioContainer extends Component {
               gridTemplateRows: "32vw 32vw 32vw",
               gridColumnGap: "1vw",
               gridRowGap: "1vw",
-              margin: "2vw auto",
-
+              margin: "2vw auto"
             }
         }>
-          {this.state.clicked === "design" ? designProjectCards : devProjectCards}
 
           {
-              this.state.imgWasClicked
-              ? <div class="popup-module">
-                  <span>&times;</span>
+            this.state.clicked === "design"
+            ? designProjectCards
+            : devProjectCards
+          }
+
+          {
+            this.state.imgWasClicked
+            ? <div>
+                <div className="popup-module">
+                  <span onClick={this.closeModule}>&times;</span>
                   <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
                   <label>{this.state.clickedProject["name"]}</label>
                 </div>
-              : null
+                <div className="fade-background" onClick={console.log("Fade")}></div>
+              </div>
+            : null
           }
 
         </div>
