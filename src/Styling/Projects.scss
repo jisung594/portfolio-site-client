@@ -49,36 +49,36 @@ $roboto: 'Roboto Slab', serif;
         z-index: 1;
       }
 
-      .project-info {
-        position: absolute;
-        z-index: 3;
-        width: 50vw;
-        height: 20vh;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        text-align: center;
-        background-color: $magenta;
-
-          h2 {
-            @include info-text-color;
-            @include no-line-height;
-            color: $lightnavy;
-            margin: 5vh 2vw 2vh 2vw;
-            font-family: $raleway;
-            font-size: 4vw;
-          }
-
-          a {
-            @include info-text-color;
-            @include no-line-height;
-            color: $lightnavy;
-            font-family: $roboto;
-            font-size: 1.5vw;
-          }
-      }
+      // .project-info {
+      //   position: absolute;
+      //   z-index: 3;
+      //   width: 50vw;
+      //   height: 20vh;
+      //   margin: auto;
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: 0;
+      //   text-align: center;
+      //   background-color: $magenta;
+      //
+      //     h2 {
+      //       @include info-text-color;
+      //       @include no-line-height;
+      //       color: $lightnavy;
+      //       margin: 5vh 2vw 2vh 2vw;
+      //       font-family: $raleway;
+      //       font-size: 4vw;
+      //     }
+      //
+      //     a {
+      //       @include info-text-color;
+      //       @include no-line-height;
+      //       color: $lightnavy;
+      //       font-family: $roboto;
+      //       font-size: 1.5vw;
+      //     }
+      // }
 
       .project-info:hover {
         position: absolute;
@@ -108,15 +108,28 @@ $roboto: 'Roboto Slab', serif;
   }
 
 
+  .design-projects {
+    display: grid;
+    grid-template-columns: 32vw 32vw 32vw;
+    grid-template-rows: 32vw 32vw 32vw;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    margin: 2vw auto;
+  }
+
+
   .popup-module {
     position: fixed;
     display: block;
+    font-size: 0;
 
     img {
       width: 70vw;
+      transform: scale(0.8);
     }
 
     span {
+      display: inline-block;
       font-size: 8vw;
       font-weight: bold;
       text-decoration: none;

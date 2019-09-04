@@ -75,6 +75,9 @@ class PortfolioContainer extends Component {
     }
 
 
+    let portfolioContainer = document.querySelector(".portfolio-container")
+
+
     return (
       <div className="portfolio-page">
         <div className="portfolio-type">
@@ -85,16 +88,10 @@ class PortfolioContainer extends Component {
 
         <h1 className="loading">HEROKU IS SO SLO W W   W</h1>
 
-        <div className="portfolio-container" style={this.state.clicked === "dev"
-          ? null
-          : {
-              display: "grid",
-              gridTemplateColumns: "32vw 32vw 32vw",
-              gridTemplateRows: "32vw 32vw 32vw",
-              gridColumnGap: "1vw",
-              gridRowGap: "1vw",
-              margin: "2vw auto"
-            }
+        <div className="portfolio-container" onLoad={
+          this.state.clicked === "design"
+          ? portfolioContainer.classList.add("design-projects")
+          : null
         }>
 
           {

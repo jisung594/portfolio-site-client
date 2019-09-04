@@ -50,9 +50,6 @@ class ProjectCard extends Component {
             onClick={() => this.props.imgClickHandler(this.props.project)}
             />
         </div>
-        <div className="project-info">
-          {/*  <h2>{this.props.project["name"]}</h2>  */}
-        </div>
       </div>
     }
 
