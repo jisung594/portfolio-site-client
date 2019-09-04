@@ -106,4 +106,25 @@ $roboto: 'Roboto Slab', serif;
       }
     }
   }
+
+
+  .popup-module {
+    position: fixed;
+    display: block;
+
+    img {
+      height: 70vw;
+    }
+
+    span {
+      font-size: 4vw;
+      font-weight: bold;
+      text-decoration: none;
+      line-height: 1;
+      float: right;
+      color: blue;
+      // margin: 0 2vw 0 2vw;
+      // position: fixed;
+    }
+  }
 }

@@ -83,7 +83,8 @@ class PortfolioContainer extends Component {
 
           {
               this.state.imgWasClicked
-              ? <div>
+              ? <div class="popup-module">
+                  <span>&times;</span>
                   <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
                   <label>{this.state.clickedProject["name"]}</label>
                 </div>
