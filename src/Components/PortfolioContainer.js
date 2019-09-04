@@ -105,13 +105,10 @@ class PortfolioContainer extends Component {
 
           {
             this.state.imgWasClicked
-            ? <div>
-                <div className="popup-module">
-                  <span onClick={this.closeModule}>&times;</span>
-                  <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
-                  <label>{this.state.clickedProject["name"]}</label>
-                </div>
-                <div className="fade-background" onClick={console.log("Fade")}></div>
+            ? <div className="popup-module">
+                <span onClick={this.closeModule}>&times;</span>
+                <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
+                <label>{this.state.clickedProject["name"]}</label>
               </div>
             : null
           }
