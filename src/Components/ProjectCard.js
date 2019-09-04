@@ -45,8 +45,9 @@ class ProjectCard extends Component {
             src={this.props.project["img"]}
             alt="screenshot"
             crossOrigin=""
-            onLoad={()=>{this.setState({loaded: true})}}
             style={this.state.loaded ? {} : {display: "none"}}
+            onLoad={()=>{this.setState({loaded: true})}}
+            onClick={() => this.props.imgClickHandler(this.props.project)}
             />
         </div>
         <div className="project-info">

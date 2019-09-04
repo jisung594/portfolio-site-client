@@ -16,7 +16,23 @@ class PortfolioContainer extends Component {
 
   state = {
     mounted: false,
-    clicked: "dev"
+    clicked: "dev",
+    imgWasClicked: false,
+    clickedProject: {}
+  }
+
+  imgClickHandler = (projectObj) => {
+    if (!this.state.imgWasClicked) {
+      this.setState({
+        imgWasClicked: true,
+        clickedProject: projectObj
+      })
+    } else {
+      this.setState({
+        imgWasClicked: false,
+        clickedProject: {}
+      })
+    }
   }
 
   clickHandler = (event) => {
@@ -36,7 +52,7 @@ class PortfolioContainer extends Component {
     let designProjectCards
     if (this.props.projects["designProjects"].length > 0) {
       designProjectCards =  this.props.projects["designProjects"].map(projectObj => {
-        return <ProjectCard project={projectObj} key={projectObj.id}/>
+        return <ProjectCard project={projectObj} key={projectObj.id} imgClickHandler={this.imgClickHandler}/>
       })
     }
 
@@ -64,6 +80,16 @@ class PortfolioContainer extends Component {
             }
         }>
           {this.state.clicked === "design" ? designProjectCards : devProjectCards}
+
+          {
+              this.state.imgWasClicked
+              ? <div>
+                  <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
+                  <label>{this.state.clickedProject["name"]}</label>
+                </div>
+              : null
+          }
+
         </div>
       </div>
     )
