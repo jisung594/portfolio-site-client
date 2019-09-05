@@ -51,8 +51,23 @@ class PortfolioContainer extends Component {
 
   clickHandler = (event) => {
     this.setState({
-      clicked: event.target.id
+      clicked: event.target.id,
+      imgWasClicked: false
     })
+
+    let portfolioContainer = document.querySelector(".portfolio-container")
+
+    if ((event.target.id === "design" && portfolioContainer.classList.contains("design-projects")) || event.target.id === "dev") {
+      portfolioContainer.classList.remove("design-projects")
+    } else {
+      portfolioContainer.classList.add("design-projects")
+    }
+
+    // if (event.target.id === "dev") {
+    //   portfolioContainer.classList.remove("design-projects")
+    // }
+
+
   }
 
   render () {
@@ -75,7 +90,7 @@ class PortfolioContainer extends Component {
     }
 
 
-    let portfolioContainer = document.querySelector(".portfolio-container")
+
 
 
     return (
@@ -88,11 +103,7 @@ class PortfolioContainer extends Component {
 
         <h1 className="loading">HEROKU IS SO SLO W W   W</h1>
 
-        <div className="portfolio-container" onLoad={
-          this.state.clicked === "design"
-          ? portfolioContainer.classList.add("design-projects")
-          : null
-        }>
+        <div className="portfolio-container" >
 
           {
             this.state.clicked === "design"
@@ -103,9 +114,11 @@ class PortfolioContainer extends Component {
           {
             this.state.imgWasClicked
             ? <div className="popup-module">
-                <span onClick={this.closeModule}>&times;</span>
-                <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
-                <label>{this.state.clickedProject["name"]}</label>
+                <div>
+                  <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
+                  <span onClick={this.closeModule}>&times;</span>
+                </div>
+                {/*  <label>{this.state.clickedProject["name"]}</label>   */}
               </div>
             : null
           }
