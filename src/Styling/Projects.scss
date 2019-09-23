@@ -53,7 +53,7 @@ $roboto: 'Roboto Slab', serif;
         position: absolute;
         z-index: 3;
         width: 50vw;
-        height: 20vh;
+        height: 30vh;
         margin: auto;
         top: 0;
         left: 0;
@@ -64,7 +64,7 @@ $roboto: 'Roboto Slab', serif;
 
           h2 {
             @include info-text-color;
-            @include no-line-height;
+            // @include no-line-height;
             color: $lightnavy;
             margin: 5vh 2vw 2vh 2vw;
             font-family: $raleway;
