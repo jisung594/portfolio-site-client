@@ -61,6 +61,8 @@ $roboto: 'Roboto Slab', serif;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        background-color: $magenta;
 
         position: absolute;
         z-index: 3;
@@ -72,8 +74,6 @@ $roboto: 'Roboto Slab', serif;
         left: 0;
         right: 0;
         bottom: 0;
-        text-align: center;
-        background-color: $magenta;
 
           h2 {
             @include info-text-color;

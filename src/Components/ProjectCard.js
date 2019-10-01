@@ -30,6 +30,7 @@ class ProjectCard extends Component {
         </div>
         <div className="project-info">
           <h2>{this.props.project["name"]}</h2>
+          <h5>{this.props.project["stack"]}</h5>
           <a href={this.props.project["url"]}>VIEW</a>
         </div>
       </div>
