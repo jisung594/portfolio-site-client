@@ -1,11 +1,6 @@
 $charcoal: #363636;
 $darkturq: #0c2d3b;
 
-html, body, .App, .App>div {
-  height: 100%;
-}
-
-
 .App {
   display: grid;
   grid-template-rows: 5vh 95vh;
