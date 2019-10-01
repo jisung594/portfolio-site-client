@@ -13,7 +13,7 @@ class MainContainer extends Component {
     return (
       <div className='main-container'>
         <Switch>
-          <Route path='/' component={Homepage} onLoad={console.log("hi")} exact/>
+          <Route path='/' component={Homepage} onLoad={console.log(Homepage.classList)} exact/>
           <Route path='/work' render={()=> {
             return <PortfolioContainer projects={this.props.projects}/>
           }}/>
