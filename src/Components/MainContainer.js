@@ -7,11 +7,13 @@ import { Switch, Route } from 'react-router-dom'
 import '../Styling/App.scss'
 
 class MainContainer extends Component {
+
+
   render () {
     return (
       <div className='main-container'>
         <Switch>
-          <Route path='/' component={Homepage} exact/>
+          <Route path='/' component={Homepage} onLoad={console.log("hi")} exact/>
           <Route path='/work' render={()=> {
             return <PortfolioContainer projects={this.props.projects}/>
           }}/>
