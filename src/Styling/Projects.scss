@@ -85,6 +85,15 @@ $roboto: 'Roboto Slab', serif;
             margin: 0;
           }
 
+          h5 {
+            @include info-text-color;
+            @include no-line-height;
+            color: $lightnavy;
+            font-family: $roboto;
+            font-size: 2vw;
+            margin: 0;
+          }
+
           a {
             @include info-text-color;
             @include no-line-height;
