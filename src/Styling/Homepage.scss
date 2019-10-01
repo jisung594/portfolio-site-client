@@ -15,7 +15,7 @@ $roboto: 'Roboto Slab', serif;
   color: $lightnavy;
   margin: 20vh auto auto 5vw;
 
-  min-height: 200vh;
+  height: 100vh !important;
 
   h1 {
     font-size: 14vw;
