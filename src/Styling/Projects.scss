@@ -53,19 +53,24 @@ $roboto: 'Roboto Slab', serif;
         position: absolute;
         z-index: 3;
         width: 50vw;
-        height: 20vh;
+        height: auto;
         margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
         text-align: center;
         background-color: $magenta;
 
           h2 {
             @include info-text-color;
             // @include no-line-height;
-            line-height: 1vw;
+            line-height: 5vw;
             color: $lightnavy;
             margin: 5vh 2vw 2vh 2vw;
             font-family: $raleway;
