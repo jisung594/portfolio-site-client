@@ -10,12 +10,13 @@ $roboto: 'Roboto Slab', serif;
 }
 
 .intro {
+  position: relative;
   font-family: $raleway;
   color: $lightnavy;
   margin: 20vh auto auto 5vw;
 
-  min-height: 150vh;
-  position: relative;
+  // min-height: 150vh;
+  height: 100%;
 
   h1 {
     font-size: 14vw;
