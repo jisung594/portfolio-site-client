@@ -42,6 +42,10 @@ $roboto: 'Roboto Slab', serif;
         width: 96vw;
         position: relative;
         z-index: 5;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       img:hover {
@@ -56,9 +60,6 @@ $roboto: 'Roboto Slab', serif;
         height: auto;
         margin: auto;
 
-        display: flex;
-        justify-content: center;
-        align-content: center;
 
         top: 0;
         left: 0;
