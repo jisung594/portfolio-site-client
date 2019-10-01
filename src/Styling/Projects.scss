@@ -54,12 +54,15 @@ $roboto: 'Roboto Slab', serif;
       }
 
       .project-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         position: absolute;
         z-index: 3;
         width: 50vw;
-        height: 30vh;
+        height: 25vh;
         margin: auto;
-
 
         top: 0;
         left: 0;
