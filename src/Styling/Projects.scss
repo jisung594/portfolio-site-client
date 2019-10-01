@@ -18,11 +18,11 @@ $roboto: 'Roboto Slab', serif;
 // PortfolioContainer styling
 .portfolio-page {
   display: grid;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: 45px 1fr;
 
   .portfolio-type {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     span {
       font-family: $roboto;
