@@ -1,6 +1,11 @@
 $charcoal: #363636;
 $darkturq: #0c2d3b;
 
+html, body, .App, .App>div {
+  height: 100%
+}
+
+
 .App {
   display: grid;
   grid-template-rows: 5vh 95vh;
@@ -10,7 +15,7 @@ $darkturq: #0c2d3b;
   .main-container {
     background-image: linear-gradient(45deg, $charcoal, $darkturq);
     color: white;
-    height: 315vh;
+    // height: 315vh;
   }
 }
 
