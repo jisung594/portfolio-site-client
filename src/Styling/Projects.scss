@@ -57,14 +57,14 @@ $roboto: 'Roboto Slab', serif;
         position: absolute;
         z-index: 3;
         width: 50vw;
-        height: 20vw;
+        height: 20vh;
         margin: auto;
 
 
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         text-align: center;
         background-color: $magenta;
 
