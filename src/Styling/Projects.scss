@@ -19,7 +19,7 @@ $roboto: 'Roboto Slab', serif;
 .portfolio-page {
   display: grid;
   grid-template-rows: 5vh 1fr;
-  max-height: 400vh;
+  min-height: 400vh;
 
   .portfolio-type {
     span {
