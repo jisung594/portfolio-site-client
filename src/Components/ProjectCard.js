@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../Styling/Projects.scss'
 
-// const ProjectCard = (props) => {
-//   let { project } = props;
+
 class ProjectCard extends Component {
   // let projectKeys = Object.keys(project)
 
