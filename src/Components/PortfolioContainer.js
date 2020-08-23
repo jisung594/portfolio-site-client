@@ -101,7 +101,7 @@ class PortfolioContainer extends Component {
           <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#3c4b52"}}>DESIGN</span>
         </div>
 
-        <h1 className="loading">HEROKU IS SO SLO W W   W</h1>
+        <h1 className="loading">SO SLO W W   W    sorry</h1>
 
         <div className="portfolio-container" >
 
@@ -116,7 +116,9 @@ class PortfolioContainer extends Component {
             ? <div className="popup-module">
                 <div>
                   <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
-                  <span onClick={this.closeModule}>&times;</span>
+                  <center>
+                    <span onClick={this.closeModule}>&times;</span>
+                  </center>
                 </div>
                 {/*  <label>{this.state.clickedProject["name"]}</label>   */}
               </div>

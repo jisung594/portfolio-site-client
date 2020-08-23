@@ -148,52 +148,35 @@ $roboto: 'Roboto Slab', serif;
     position: fixed;
     display: block;
     z-index: 2;
-    overflow: scroll;
-    // font-size: 0;
-
-    // img {
-    //   max-width: 100%;
-    //   max-height: 100%;
-    //   height: auto;
-    //   width: 90%;
-    //   margin-left: 5%;
-    // }
-    //
-    // span {
-    //   font-size: 8vw;
-    //   font-weight: bold;
-    //   text-decoration: none;
-    //   line-height: 0.3;
-    //   color: blue;
-    //   right: 50vw;
-    //   margin: 2vw;
-    // }
+    // overflow: scroll;
+    overflow: visible;
 
     div {
       position: relative;
       width: 100vw;
-      height: 50vw;
+      height: 45vw;
+      margin-top: 10px;
 
       img {
         position: absolute;
-        width: 50vw;
-        height: auto;
-        // left: 50vw;
-        right: 50vw;
-        // transform: scale(0.6);
+        width: auto;
+        height: 100%;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
       }
 
       span {
-        // display: inline-block;
         position: absolute;
-        font-size: 8vw;
+
+        font-size: 4vw;
         font-weight: bold;
         text-decoration: none;
-        line-height: 0.3;
+        line-height: 0.5;
         color: blue;
-        right: 50vw;
-        margin: 2vw;
-        // float: right;
       }
     }
   }
