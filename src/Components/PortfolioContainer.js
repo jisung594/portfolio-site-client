@@ -22,24 +22,10 @@ class PortfolioContainer extends Component {
   }
 
   imgClickHandler = (projectObj) => {
-
     this.setState({
       imgWasClicked: true,
       clickedProject: projectObj
     })
-
-
-    // if (!this.state.imgWasClicked) {
-    //   this.setState({
-    //     imgWasClicked: true,
-    //     clickedProject: projectObj
-    //   })
-    // } else {
-    //   this.setState({
-    //     imgWasClicked: false,
-    //     clickedProject: {}
-    //   })
-    // }
   }
 
   closeModule = () => {
@@ -62,13 +48,9 @@ class PortfolioContainer extends Component {
     } else {
       portfolioContainer.classList.add("design-projects")
     }
-
-    // if (event.target.id === "dev") {
-    //   portfolioContainer.classList.remove("design-projects")
-    // }
-
-
   }
+
+
 
   render () {
     let devProjectCards
@@ -90,42 +72,58 @@ class PortfolioContainer extends Component {
     }
 
 
-
-
-
     return (
       <div className="portfolio-page">
         <div className="portfolio-type">
-          <span id="dev" onClick={this.clickHandler} style={this.state.clicked === "dev" ? {color:"#E8175D"} : {color:"#3c4b52"}}>DEV</span>
+          <span id="dev"
+            onClick={this.clickHandler}
+            style={
+              this.state.clicked === "dev"
+              ? {color:"#E8175D"}
+              : {color:"#3c4b52"}
+            }>DEV</span>
           <span>|</span>
-          <span id="design" onClick={this.clickHandler} style={this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#3c4b52"}}>DESIGN</span>
+          <span
+            id="design"
+            onClick={this.clickHandler}
+            style={
+              this.state.clicked === "design"
+              ? {color:"#E8175D"}
+              : {color:"#3c4b52"}
+            }>DESIGN</span>
         </div>
 
         <h1 className="loading">SO SLO W W   W    sorry</h1>
 
-        <div className="portfolio-container" >
+        <div
+          className="portfolio-container"
+          style={
+            this.state.imgWasClicked
+            ? {opacity:"10%"}
+            : {opacity:"100%"}
+          }
+        >
 
           {
             this.state.clicked === "design"
             ? designProjectCards
             : devProjectCards
           }
-
-          {
-            this.state.imgWasClicked
-            ? <div className="popup-module">
-                <div>
-                  <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
-                  <center>
-                    <span onClick={this.closeModule}>&times;</span>
-                  </center>
-                </div>
-                {/*  <label>{this.state.clickedProject["name"]}</label>   */}
-              </div>
-            : null
-          }
-
         </div>
+
+        {
+          this.state.imgWasClicked
+          ? <div className="popup-module">
+              <div>
+                <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
+                <center>
+                  <span onClick={this.closeModule}>&times;</span>
+                </center>
+              </div>
+              <h3>{this.state.clickedProject["name"]}</h3>
+            </div>
+          : null
+        }
       </div>
     )
   }
