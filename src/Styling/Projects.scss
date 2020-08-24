@@ -33,6 +33,7 @@ $roboto: 'Roboto Slab', serif;
     }
   }
 
+
   .portfolio-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -49,14 +50,17 @@ $roboto: 'Roboto Slab', serif;
 
         position: relative;
         width: 96vw;
-        z-index: 5;
+        z-index: 2;
+
+        // opacity: 80%;
       }
 
-      img:hover {
-        opacity: 0.05;
-        z-index: 1;
-      }
+      // img:hover {
+      //   opacity: 0.05;
+      //   z-index: 1;
+      // }
 
+    // ------------------------------
       .project-info {
         display: flex;
         flex-direction: column;
@@ -66,7 +70,7 @@ $roboto: 'Roboto Slab', serif;
         background-color: $magenta;
 
         position: absolute;
-        z-index: 3;
+        z-index: 10;
         width: 50vw;
         height: 25vh;
         margin: auto;
@@ -105,11 +109,15 @@ $roboto: 'Roboto Slab', serif;
           }
       }
 
-      .project-info:hover {
-        position: absolute;
-        z-index: 10;
-      }
+      // .project-info:hover {
+      //   position: absolute;
+      //   z-index: 10;
+      // }
+    // ------------------------------
+
+
     }
+
 
 
     .design-card {

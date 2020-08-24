@@ -17,8 +17,17 @@ class PortfolioContainer extends Component {
   state = {
     mounted: false,
     clicked: "dev",
+    imgWasHovered: false,
     imgWasClicked: false,
+    hoveredProject: {},
     clickedProject: {}
+  }
+
+  imgHoverHandler = (projectObj) => {
+    this.setState({
+      imgWasHovered: !this.state.imgWasHovered,
+      hoveredProject: projectObj
+    })
   }
 
   imgClickHandler = (projectObj) => {
@@ -51,12 +60,17 @@ class PortfolioContainer extends Component {
   }
 
 
-
   render () {
     let devProjectCards
     if (this.props.projects["devProjects"].length > 0) {
       devProjectCards = this.props.projects["devProjects"].map(projectObj => {
-        return <ProjectCard project={projectObj} key={projectObj.id}/>
+        return <ProjectCard
+          project={projectObj}
+          key={projectObj.id}
+          imgHoverHandler={this.imgHoverHandler}
+          imgWasHovered={this.state.imgWasHovered}
+          hoveredProject={this.state.hoveredProject}
+        />
       })
     }
 
@@ -70,6 +84,12 @@ class PortfolioContainer extends Component {
         />
       })
     }
+
+
+    // ---------------------------------------------
+    console.log(this.state.hoveredProject.name, this.state.imgWasHovered);
+    // ---------------------------------------------
+
 
 
     return (
@@ -97,12 +117,8 @@ class PortfolioContainer extends Component {
 
         <div
           className="portfolio-container"
-          style={
-            this.state.imgWasClicked
-            ? {opacity:"10%"}
-            : {opacity:"100%"}
-          }
-        >
+          style={this.state.imgWasClicked ? {opacity:"10%"}: {opacity:"100%"}
+        }>
 
           {
             this.state.clicked === "design"
@@ -112,7 +128,7 @@ class PortfolioContainer extends Component {
         </div>
 
         {
-          this.state.imgWasClicked
+          this.state.clickedProject.type === "design"
           ? <div className="popup-module">
               <div>
                 <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
