@@ -9,15 +9,11 @@ class ProjectCard extends Component {
   }
 
   render() {
-
-
     let keyValues
     if (this.props.project["type"] === "dev") {
       keyValues = <div className="dev-card"
-      // ----------------
-        // onMouseOver={() => this.props.imgHoverHandler(this.props.project)}
-        // onMouseLeave={() => this.props.imgHoverHandler({})}
-      // ----------------
+        onMouseEnter={() => this.props.imgHoverHandler(this.props.project)}
+        onMouseLeave={() => this.props.imgHoverHandler({})}
       >
           {
             this.state.loaded
@@ -26,26 +22,6 @@ class ProjectCard extends Component {
           }
 
 
-          <div>
-            <img
-              src={this.props.project["img"]}
-              alt="screenshot"
-              crossOrigin=""
-              onLoad={()=>{this.setState({loaded: true})}}
-              style={
-                this.state.loaded
-                ? {}
-                : {display: "none"},
-                this.props.imgWasHovered && this.props.project.name == this.props.hoveredProject.name
-                ? {opacity: "20%"}
-                : {opacity: "100%"}
-              }
-              onMouseOver={() => this.props.imgHoverHandler(this.props.project)}
-              onMouseOut={() => this.props.imgHoverHandler({})}
-            />
-          </div>
-
-        
           <div>
             {
               this.props.imgWasHovered
@@ -58,6 +34,23 @@ class ProjectCard extends Component {
             }
           </div>
 
+
+          <div>
+            <img
+              src={this.props.project["img"]}
+              alt="screenshot"
+              crossOrigin=""
+              onLoad={()=>{this.setState({loaded: true})}}
+              style={
+                this.state.loaded
+                ? {}
+                : {display: "none"},
+                this.props.imgWasHovered && this.props.project.name === this.props.hoveredProject.name
+                ? {opacity: "20%"}
+                : {opacity: "100%"}
+              }
+            />
+          </div>
       </div>
     } else {
       keyValues = <div className="design-card">
