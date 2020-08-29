@@ -13,34 +13,21 @@ $roboto: 'Roboto Slab', serif;
   position: relative;
   font-family: $raleway;
   color: $lightnavy;
-  margin: 20vh auto auto 5vw;
+  margin: 14vh auto auto 5vw;
 
   h1 {
-    font-size: 14vw;
+    font-size: 10vw;
     line-height: 7vh;
   }
 
   h4 {
     font-size: 3vw;
-    line-height: 1vh;
+    margin: 10px auto 10px auto;
+    // line-height: 1vh;
   }
 
   span {
     color: $magenta;
   }
 
-
-  .footer1 {
-    position: absolute;
-    bottom: 2%;
-  }
-
-  .footer2 {
-    position: absolute;
-    bottom: 0%;
-  }
 }
-
-// .thanks {
-//   margin: 20vh auto auto 5vw;
-// }
