@@ -21,18 +21,15 @@ class ProjectCard extends Component {
             : <h1>LOADING...</h1>
           }
 
-
-          <div>
-            {
-              this.props.imgWasHovered
-              ? <div className="project-info">
-                  <h2>{this.props.hoveredProject["name"]}</h2>
-                  <h5>{this.props.hoveredProject["stack"]}</h5>
-                  <a href={this.props.hoveredProject["url"]}>VIEW</a>
-                </div>
-              : null
-            }
-          </div>
+          {
+            this.props.hoveredProject.name
+            ? <div className="project-info">
+                <h2>{this.props.hoveredProject["name"]}</h2>
+                <h5>{this.props.hoveredProject["stack"]}</h5>
+                <a href={this.props.hoveredProject["url"]}>VIEW</a>
+              </div>
+            : null
+          }
 
 
           <div>

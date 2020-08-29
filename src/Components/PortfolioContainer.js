@@ -25,7 +25,8 @@ class PortfolioContainer extends Component {
 
   imgHoverHandler = (projectObj) => {
     this.setState({
-      imgWasHovered: !this.state.imgWasHovered,
+      // imgWasHovered: !this.state.imgWasHovered,
+      imgWasHovered: true,
       hoveredProject: projectObj
     })
   }
