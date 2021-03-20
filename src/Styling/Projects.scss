@@ -189,24 +189,24 @@ $roboto: 'Roboto Slab', serif;
         margin: auto;
       }
 
-      span {
-        position: absolute;
-        font-size: 4vw;
-        font-weight: bold;
-        text-decoration: none;
-        line-height: 0.5;
-        color: white;
-        margin-top: 10px;
-
-        text-shadow: 1px 1px 24px black;
-      }
-
-      span:hover {
-        color: $darkturq;
-      }
+      // .close-btn {
+      //   position: absolute;
+      //   font-size: 4vw;
+      //   font-weight: bold;
+      //   text-decoration: none;
+      //   line-height: 0.5;
+      //   color: white;
+      //   margin-top: 10px;
+      //
+      //   text-shadow: 1px 1px 24px black;
+      // }
+      //
+      // .close-btn:hover {
+      //   color: $darkturq;
+      // }
     }
 
-    h3 {
+    .proj-title {
       font-family: $raleway;
       font-size: 14px;
       text-align: center;

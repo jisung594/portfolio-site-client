@@ -8,10 +8,6 @@ class PortfolioContainer extends Component {
     this.setState({
       mounted: true
     })
-
-    let loading = document.querySelector(".loading")
-    loading.innerText = ""
-    loading.style.display = "none"
   }
 
   state = {
@@ -25,7 +21,6 @@ class PortfolioContainer extends Component {
 
   imgHoverHandler = (projectObj) => {
     this.setState({
-      // imgWasHovered: !this.state.imgWasHovered,
       imgWasHovered: true,
       hoveredProject: projectObj
     })
@@ -86,41 +81,33 @@ class PortfolioContainer extends Component {
       })
     }
 
-
-    // ---------------------------------------------
-    console.log(this.state.hoveredProject.name, this.state.imgWasHovered);
-    // ---------------------------------------------
-
+    // console.log(this.state.hoveredProject.name, this.state.imgWasHovered);
 
 
     return (
       <div className="portfolio-page">
-        <div className="portfolio-type">
+        <div
+          className="portfolio-type"
+          style={this.state.imgWasClicked ? {opacity:"10%"}: {opacity:"100%"}}
+        >
           <span id="dev"
             onClick={this.clickHandler}
             style={
-              this.state.clicked === "dev"
-              ? {color:"#E8175D"}
-              : {color:"#3c4b52"}
+              this.state.clicked === "dev" ? {color:"#E8175D"} : {color:"#3c4b52"}
             }>DEV</span>
           <span>|</span>
           <span
             id="design"
             onClick={this.clickHandler}
             style={
-              this.state.clicked === "design"
-              ? {color:"#E8175D"}
-              : {color:"#3c4b52"}
+              this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#3c4b52"}
             }>DESIGN</span>
         </div>
 
-        <h1 className="loading">SO SLO W W   W    sorry</h1>
-
         <div
           className="portfolio-container"
-          style={this.state.imgWasClicked ? {opacity:"10%"}: {opacity:"100%"}
-        }>
-
+          style={this.state.imgWasClicked ? {opacity:"10%"}: {opacity:"100%"}}
+        >
           {
             this.state.clicked === "design"
             ? designProjectCards
@@ -130,14 +117,11 @@ class PortfolioContainer extends Component {
 
         {
           this.state.clickedProject.type === "design"
-          ? <div className="popup-module">
+          ? <div className="popup-module" onClick={this.closeModule}>
               <div>
                 <img src={this.state.clickedProject["img"]} alt={this.state.clickedProject["name"]}/>
-                <center>
-                  <span onClick={this.closeModule}>&times;</span>
-                </center>
               </div>
-              <h3>{this.state.clickedProject["name"]}</h3>
+              <h3 className='proj-title'>{this.state.clickedProject["name"]}</h3>
             </div>
           : null
         }
