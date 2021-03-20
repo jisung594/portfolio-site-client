@@ -115,12 +115,30 @@ $roboto: 'Roboto Slab', serif;
 
 
     .design-card {
-      background-color: lightgray;
       width: 32vw;
       height: 32vw;
       margin: auto;
       overflow: hidden;
-      position:relative;
+      position: relative;
+      text-align: center;
+
+
+      .loading-wheel {
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        border: 8px solid $lightnavy;
+        border-radius: 50%;
+        border-top-color: $magenta;
+        margin-bottom: 10rem;
+        animation: 1s spin infinite ease-in-out;
+
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
 
       img {
         position: absolute;
@@ -194,19 +212,5 @@ $roboto: 'Roboto Slab', serif;
       text-align: center;
     }
   }
-
-  // .fade-background {
-  //   width: 100vw;
-  //   height: 100vh;
-  //   background-color: black;
-  //   opacity: 0.2;
-  // }
-
-  // .popup-module:after {
-  //   content: "";
-  //   background-color: black;
-  //   width: 100vw;
-  //   position: absolute;
-  // }
 
 }

@@ -3,7 +3,6 @@ import '../Styling/Projects.scss'
 
 
 class ProjectCard extends Component {
-
   state = {
     loaded: false
   }
@@ -18,9 +17,8 @@ class ProjectCard extends Component {
           {
             this.state.loaded
             ? null
-            : <h1>LOADING...</h1>
+            : <div className='loading-wheel'></div>
           }
-
           {
             this.props.hoveredProject.name
             ? <div className="project-info">
@@ -30,7 +28,6 @@ class ProjectCard extends Component {
               </div>
             : null
           }
-
 
           <div>
             <img
@@ -51,21 +48,20 @@ class ProjectCard extends Component {
       </div>
     } else {
       keyValues = <div className="design-card">
-        <div>
-          {
-            this.state.loaded
-            ? null
-            : <h1>LOADING...</h1>
-          }
-          <img
-            src={this.props.project["img"]}
-            alt="screenshot"
-            crossOrigin=""
-            style={this.state.loaded ? {} : {display: "none"}}
-            onLoad={()=>{this.setState({loaded: true})}}
-            onClick={() => this.props.imgClickHandler(this.props.project)}
-          />
-        </div>
+        {
+          this.state.loaded
+          ? null
+          : <div className='loading-wheel'></div>
+        }
+
+        <img
+          src={this.props.project["img"]}
+          alt="screenshot"
+          crossOrigin=""
+          style={this.state.loaded ? {} : {display: "none"}}
+          onLoad={()=>{this.setState({loaded: true})}}
+          onClick={() => this.props.imgClickHandler(this.props.project)}
+        />
       </div>
     }
 
