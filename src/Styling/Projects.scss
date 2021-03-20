@@ -124,12 +124,13 @@ $roboto: 'Roboto Slab', serif;
 
 
       .loading-wheel {
-        width: 10rem;
-        height: 10rem;
+        width: 6rem;
+        height: 6rem;
         display: inline-block;
         border: 8px solid $lightnavy;
         border-radius: 50%;
         border-top-color: $magenta;
+        margin-top: 10rem;
         margin-bottom: 10rem;
         animation: 1s spin infinite ease-in-out;
 
