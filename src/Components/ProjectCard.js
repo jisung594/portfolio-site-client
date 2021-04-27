@@ -9,7 +9,7 @@ class ProjectCard extends Component {
 
   render() {
     let keyValues
-    if (this.props.project["type"] === "dev") {
+    if (this.props.project["type"] === "dev" || this.props.project["type"] === "wip") {
       keyValues = <div className="dev-card"
         onMouseEnter={() => this.props.imgHoverHandler(this.props.project)}
         onMouseLeave={() => this.props.imgHoverHandler({})}

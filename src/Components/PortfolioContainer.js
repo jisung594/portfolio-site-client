@@ -48,7 +48,11 @@ class PortfolioContainer extends Component {
 
     let portfolioContainer = document.querySelector(".portfolio-container")
 
-    if ((event.target.id === "design" && portfolioContainer.classList.contains("design-projects")) || event.target.id === "dev") {
+    if ((event.target.id === "design" &&
+      portfolioContainer.classList.contains("design-projects")) ||
+      event.target.id === "dev" ||
+      event.target.id === "wip"
+    ) {
       portfolioContainer.classList.remove("design-projects")
     } else {
       portfolioContainer.classList.add("design-projects")
@@ -72,7 +76,7 @@ class PortfolioContainer extends Component {
 
     let designProjectCards
     if (this.props.projects["designProjects"].length > 0) {
-      designProjectCards =  this.props.projects["designProjects"].map(projectObj => {
+      designProjectCards = this.props.projects["designProjects"].map(projectObj => {
         return <ProjectCard
           project={projectObj}
           key={projectObj.id}
@@ -81,7 +85,18 @@ class PortfolioContainer extends Component {
       })
     }
 
-    // console.log(this.state.hoveredProject.name, this.state.imgWasHovered);
+    let wipProjectCards
+    if (this.props.projects["wipProjects"].length > 0) {
+      wipProjectCards = this.props.projects["wipProjects"].map(projectObj => {
+        return <ProjectCard
+          project={projectObj}
+          key={projectObj.id}
+          imgHoverHandler={this.imgHoverHandler}
+          imgWasHovered={this.state.imgWasHovered}
+          hoveredProject={this.state.hoveredProject}
+        />
+      })
+    }
 
 
     return (
@@ -102,6 +117,16 @@ class PortfolioContainer extends Component {
             style={
               this.state.clicked === "design" ? {color:"#E8175D"} : {color:"#3c4b52"}
             }>DESIGN</span>
+
+
+          <span>|</span>
+          <span
+            id="wip"
+            onClick={this.clickHandler}
+            style={
+              this.state.clicked === "wip" ? {color:"#E8175D"} : {color:"#3c4b52"}
+          }>WIP</span>
+
         </div>
 
         <div
@@ -109,9 +134,11 @@ class PortfolioContainer extends Component {
           style={this.state.imgWasClicked ? {opacity:"10%"}: {opacity:"100%"}}
         >
           {
-            this.state.clicked === "design"
-            ? designProjectCards
-            : devProjectCards
+            // this.state.clicked === "design" ? designProjectCards : devProjectCards
+
+            this.state.clicked === "design" ? designProjectCards
+            : this.state.clicked === "dev" ? devProjectCards
+            : wipProjectCards
           }
         </div>
 

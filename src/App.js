@@ -8,14 +8,16 @@ import './Styling/App.scss';
 class App extends Component {
   state = {
     devProjects: [],
-    designProjects: []
+    designProjects: [],
+    wipProjects: []
   }
 
   componentDidMount() {
     this.callBackend()
       .then(res => this.setState({
         devProjects: res[0],
-        designProjects: res[1]
+        designProjects: res[1],
+        wipProjects: res[2]
       }))
       .catch(err => console.log(err))
   }
@@ -30,6 +32,7 @@ class App extends Component {
     }
     return body
   }
+
 
   render () {
     return (
